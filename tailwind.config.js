@@ -1,6 +1,10 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      md: '736px',
+      xl: '1248px',
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -14,6 +18,10 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
+      spacing: {
+        42: '10.4375rem', // Add custom spacing value '42' for 10.4375rem
+        65: '16.25rem',
+      },
       margin: {
         none: 'unset',
       },
@@ -28,11 +36,12 @@ module.exports = {
         gts: ['GT Standard S'],
       },
       colors: {
-        purple: '#5741d9',
+        purple: '#5d45dc',
         green: '#3B9B4A',
         white: '#FEFEFE',
         blur: '#7360de',
         grey: '#AFAFAF',
+        'custom-grey': 'rgba(211,213,221,0.5)',
         bshu: '#898989',
         greyblur: '#EEEEEE',
         purpleblur: '#4631c9',
