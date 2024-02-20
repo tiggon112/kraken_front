@@ -4,7 +4,7 @@ const TextBigPurple = (props: {
 }) => {
   return (
     <h2
-      className={` ${props.additionalClassName} text-center text-[34px] font-medium leading-[54px] text-purple lg:text-[40px]`}
+      className={` ${props.additionalClassName} lg:text-[40px] text-center text-[34px] font-medium leading-[54px] text-purple`}
     >
       {props.text}
     </h2>
