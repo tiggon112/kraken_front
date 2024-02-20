@@ -6,7 +6,7 @@ import Contents from './Contents';
 
 const Sidebar = () => {
   const pathname = usePathname();
-  const current = pathname.split('/')[2];
+  const current = pathname?.split('/')[2];
 
   return (
     <nav className="absolute w-65 translate-x-0 transition-transform duration-300 ease-in-out xl:left-[calc((100vw-1248px)/2)]">

@@ -46,6 +46,7 @@ module.exports = {
         greyblur: '#EEEEEE',
         purpleblur: '#4631c9',
         backgrey: 'rgb(238, 236, 251)',
+        darkgrey: 'rgb(104, 107, 130)',
         primary: {
           100: '#472fc2',
           200: '#FFFFFF',
