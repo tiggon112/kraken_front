@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    font-family: Celias;
+    /* font-family: Celias; */
   }
 
   a,
@@ -14,6 +14,9 @@
     outline: none !important;
   }
 
+  p {
+    font-family: IBM Plex Sans;
+  }
 }
 
 @layer components {

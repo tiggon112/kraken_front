@@ -10,8 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { CustomCard } from '@/components/Card';
 import Layout from '@/components/Layouts/Layout';
 import { Percent } from '@/components/SVG/Percent';
-
-import type { NextPageWithLayout } from '../_app';
+import type { NextPageWithLayout } from '@/pages/_app';
 
 const Home: NextPageWithLayout = () => {
   return (

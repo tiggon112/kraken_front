@@ -10,15 +10,17 @@ import Contents from '../Constants/Contents';
 import Support from '../Constants/Support';
 
 const MobileHeader = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const [hide, setHide] = useState(true);
   const pathname = usePathname();
   const current = pathname?.split('/')[2];
 
   useEffect(() => {
     const handleOutSideClick = (event: any) => {
-      if (!ref.current?.contains(event.target)) {
-        setHide(true);
+      if (ref.current) {
+        if (!ref.current.contains(event.target)) {
+          setHide(true);
+        }
       }
     };
 
@@ -56,7 +58,7 @@ const MobileHeader = () => {
         <div></div>
       </nav>
       <div
-        className={`fixed top-0 z-50 h-full w-full bg-grey/50 duration-500 ${
+        className={`fixed top-0 z-50 h-full w-full duration-500 ${
           hide ? 'left-[-4099px]' : 'left-0'
         }`}
       >

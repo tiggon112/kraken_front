@@ -1,6 +1,5 @@
 import Layout from '@/components/Layouts/Layout';
-
-import type { NextPageWithLayout } from '../_app';
+import type { NextPageWithLayout } from '@/pages/_app';
 
 const Home: NextPageWithLayout = () => {
   return <p>joij</p>;
