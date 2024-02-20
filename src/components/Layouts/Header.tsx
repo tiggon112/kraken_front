@@ -8,7 +8,7 @@ import { ARoundedPurple } from '../Buttons/ARoundedPurple';
 import { BlueLogo } from '../Header/BlueLogo';
 
 const Header = () => (
-  <nav className="relative top-0 z-50 box-border flex h-[3.5rem] w-screen justify-center">
+  <nav className="relative top-0 z-50 box-border hidden h-[3.5rem] w-screen justify-center md:flex">
     <div className="ml-3 grid h-[3.5rem] w-[75rem] max-w-[75rem] grid-cols-3 items-center align-middle">
       <div className="col-span-1">
         <BlueLogo />

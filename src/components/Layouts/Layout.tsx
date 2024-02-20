@@ -1,4 +1,5 @@
 import Header from './Header';
+import MobileHeader from './MobileHeader';
 import Sidebar from './Sidebar';
 
 interface Props {
@@ -10,6 +11,7 @@ export default function Layout({ children }: Props) {
     <div className="flex w-full justify-center bg-[#f8f1f0]">
       <div className="fixed top-0 z-50 box-border border-b border-solid border-custom-grey">
         <Header />
+        <MobileHeader />
         <Sidebar />
       </div>
       <div className="flex w-full justify-center">
