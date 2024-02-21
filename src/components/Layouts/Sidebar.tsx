@@ -11,7 +11,7 @@ const Sidebar = () => {
   return (
     <nav className="absolute hidden w-36 translate-x-0 transition-transform duration-300 ease-in-out md:block xl:left-[calc((100vw-1214px)/2)] xl:w-[15.25rem]">
       <div className="z-40 box-border flex h-screen w-full flex-col border-r border-custom-grey pt-8">
-        <menu className="flex flex-col items-center gap-y-4 xl:items-start">
+        <menu className="flex flex-col items-center gap-y-1 xl:items-start">
           {Contents?.map((item, i) => {
             const isActive = current === item.key.toLowerCase();
             return (
@@ -24,7 +24,7 @@ const Sidebar = () => {
                     href={item.link}
                     className={`${
                       isActive ? 'text-purple' : 'text-[#707388]'
-                    } relative flex flex-col items-center justify-start gap-x-3 gap-y-1 overflow-visible text-wrap rounded-full px-3 py-2 text-center duration-300 hover:text-purple xl:w-[60%] xl:flex-row  xl:gap-y-2 hover:xl:w-[90%] hover:xl:bg-white hover:xl:shadow-md`}
+                    } relative flex flex-col items-center justify-start gap-x-3 gap-y-1 overflow-visible text-wrap rounded-full px-3 py-4 text-center duration-300 hover:text-purple xl:w-[60%] xl:flex-row  xl:gap-y-2 hover:xl:w-[90%] hover:xl:bg-white hover:xl:shadow-md`}
                   >
                     <FontAwesomeIcon className={`h-6 w-6 `} icon={item.icon} />
                     {item.label}

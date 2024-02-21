@@ -9,13 +9,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { CustomCard } from '@/components/Card';
 import Layout from '@/components/Layouts/Layout';
-import { Percent } from '@/components/SVG/Percent';
 import type { NextPageWithLayout } from '@/pages/_app';
 
 const Home: NextPageWithLayout = () => {
   return (
     <div className="flex w-full max-w-[62rem] flex-col gap-y-4 p-8">
-      <h1 className="mb-6 text-4xl font-semibold text-purple">
+      <h1 className="mb-6 text-4xl font-bold text-purple">
         Good evening, Legas
       </h1>
       <CustomCard className="px-8 py-6">
@@ -71,12 +70,15 @@ const Home: NextPageWithLayout = () => {
           </div>
         </div>
       </CustomCard>
-      <CustomCard>
+      {/* <CustomCard>
         <div className="flex gap-x-4">
           <div className="flex h-fit w-fit rounded-full bg-custom-grey p-1">
             <Percent />
           </div>
         </div>
+      </CustomCard> */}
+      <CustomCard className="w-full p-0">
+        <div className="h-8 w-full rounded-2xl bg-purple"></div>
       </CustomCard>
     </div>
   );

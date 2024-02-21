@@ -52,7 +52,7 @@ const Deposit: NextPageWithLayout = () => {
                       classNames(
                         ' text-nowrap flex gap-2 items-center w-fit rounded-full py-2 text-md font-medium px-4',
                         'ring-white/60 focus:outline-none focus:ring-2',
-                        selected
+                        !selected
                           ? 'bg-white text-black shadow'
                           : 'text-stone-600 hover:bg-white/[0.12] hover:text-black',
                       )
@@ -69,7 +69,7 @@ const Deposit: NextPageWithLayout = () => {
           <div>
             <CustomCard className="mt-4 flex flex-col gap-8 p-6 px-8">
               <div className="flex justify-between">
-                <h2 className=" text-2xl font-medium">Deposit</h2>
+                <h2 className=" text-2xl font-medium">Withdraw</h2>
               </div>
               <div className="flex flex-col gap-8 text-stone-600">
                 <Menu as="div" className="relative inline-block text-left">

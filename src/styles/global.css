@@ -14,8 +14,12 @@
     outline: none !important;
   }
 
+  span {
+    font-family: Celias,Helvetica,Arial,sans-serif;
+  }
+
   p {
-    font-family: IBM Plex Sans;
+    font-family: IBM Plex Sans,Helvetica,Arial,sans-serif;
   }
 }
 

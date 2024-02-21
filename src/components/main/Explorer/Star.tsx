@@ -10,7 +10,12 @@ const StarComponent = (props: Props) => {
   const [isActive, setIsActive] = useState(props.isActive);
 
   return (
-    <div onClick={() => setIsActive(!isActive)}>
+    <div
+      onClick={(e) => {
+        e.preventDefault();
+        setIsActive(!isActive);
+      }}
+    >
       <Star isActive={isActive} />
     </div>
   );

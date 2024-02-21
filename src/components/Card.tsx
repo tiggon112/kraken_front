@@ -7,9 +7,7 @@ type RoundedAProps = {
 
 const CustomCard = ({ children, className = '' }: RoundedAProps) => {
   return (
-    <div className={`${className} w-full rounded-2xl bg-white  p-4`}>
-      {children}
-    </div>
+    <div className={`${className} w-full rounded-2xl bg-white`}>{children}</div>
   );
 };
 
