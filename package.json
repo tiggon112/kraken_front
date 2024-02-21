@@ -20,6 +20,8 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@headlessui/react": "^1.7.18",
+    "@heroicons/react": "^2.0.18",
     "axios": "^1.6.7",
     "classnames": "^2.3.2",
     "next": "^14.0.0",
@@ -27,11 +29,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.2",
-    "styled-jsx-plugin-postcss": "^4.0.1",
-    "@headlessui/react": "^1.7.17"
+    "styled-jsx-plugin-postcss": "^4.0.1"
   },
   "devDependencies": {
-    "@heroicons/react": "^2.0.18",
     "@next/bundle-analyzer": "^14.0.0",
     "@types/node": "^20.8.9",
     "@types/react": "^18.2.33",

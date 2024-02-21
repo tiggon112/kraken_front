@@ -43,7 +43,7 @@ const Home: NextPageWithLayout = () => {
                 />
                 <span className="text-purple">Sell</span>
               </div>
-              <div className="flex flex-col items-center">
+              <div className="hidden flex-col items-center sm:flex">
                 <FontAwesomeIcon
                   className={`h-6 w-6 rounded-full bg-purple/90 p-4 hover:bg-purple`}
                   icon={faLeftRight}

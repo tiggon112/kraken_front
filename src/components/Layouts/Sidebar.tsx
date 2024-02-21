@@ -9,7 +9,7 @@ const Sidebar = () => {
   const current = pathname?.split('/')[2];
 
   return (
-    <nav className="absolute hidden w-36 translate-x-0 transition-transform duration-300 ease-in-out md:block xl:left-[calc((100vw-1248px)/2)] xl:w-65">
+    <nav className="absolute hidden w-36 translate-x-0 transition-transform duration-300 ease-in-out md:block xl:left-[calc((100vw-1214px)/2)] xl:w-[15.25rem]">
       <div className="z-40 box-border flex h-screen w-full flex-col border-r border-custom-grey pt-8">
         <menu className="flex flex-col items-center gap-y-4 xl:items-start">
           {Contents?.map((item, i) => {

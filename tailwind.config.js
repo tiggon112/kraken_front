@@ -37,6 +37,7 @@ module.exports = {
         gts: ['GT Standard S'],
       },
       colors: {
+        bgcolor: '#f8f1f0',
         purple: '#5d45dc',
         green: '#3B9B4A',
         white: '#FEFEFE',
