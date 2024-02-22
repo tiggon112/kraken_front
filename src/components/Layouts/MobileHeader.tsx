@@ -120,7 +120,7 @@ const MobileHeader = () => {
                 })}
               </div>
               <div className="mt-3">
-                <ARoundedPurple additionalClassName="p-2" text="Buy Crypto" />
+                <ARoundedPurple className="p-2" text="Buy Crypto" />
               </div>
             </div>
             <div className="pt-2">

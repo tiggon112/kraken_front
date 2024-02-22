@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 type MelaniImageProps = {
-  additionalClassName?: string;
+  className?: string;
   children?: ReactNode;
   srcPath?: string;
 };
@@ -11,7 +11,7 @@ const MelaniImage = (props: MelaniImageProps) => {
     <img
       src={`${props.srcPath}`}
       alt=""
-      className={`${props.additionalClassName} object-cover object-center`}
+      className={`${props.className} object-cover object-center`}
     />
   );
 };

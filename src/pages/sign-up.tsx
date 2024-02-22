@@ -108,7 +108,7 @@ const SignUp = () => {
           <div className="ml-auto flex items-center gap-1">
             <LangCombo selectedColor=" text-white " />
             <ARoundedTransparent
-              additionalClassName=" sign-in-button-at-sign-up py-[6px] px-[22px] ml-2 common-sign-upin-button"
+              className=" sign-in-button-at-sign-up common-sign-upin-button ml-2 px-[22px] py-[6px]"
               text="Sign In"
               href="/sign-in"
             />
@@ -215,7 +215,7 @@ const SignUp = () => {
                 }`}
               >
                 <ARoundedPurple
-                  additionalClassName={`${
+                  className={`${
                     email === '' ||
                     password === '' ||
                     username === '' ||
@@ -224,7 +224,7 @@ const SignUp = () => {
                     !agreedOnPolicy
                       ? 'disabled-a'
                       : 'enabled-a'
-                  } lg:w-auto w-full "`}
+                  } " w-full lg:w-auto`}
                   text="Create account"
                   onclick={() =>
                     console.log({

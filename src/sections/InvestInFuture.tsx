@@ -73,11 +73,11 @@ const InvestInFuture = () => {
           </MelaniWrapper>
           <div className=" absolute left-0 top-0 -z-10 h-full w-full overflow-hidden bg-backgrey">
             <MelaniImage
-              additionalClassName={` w-full block lg:hidden h-auto `}
+              className={` block h-auto w-full lg:hidden `}
               srcPath="/assets/images/snakes-from-right-top-2151x1011.png"
             />
             <MelaniImage
-              additionalClassName={`h-full w-full hidden lg:block`}
+              className={`hidden h-full w-full lg:block`}
               srcPath="/assets/images/snakes-from-left-bottom-2880x1594.png"
             />
           </div>

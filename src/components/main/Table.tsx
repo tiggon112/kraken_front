@@ -2,6 +2,12 @@ import { Tab } from '@headlessui/react';
 import classNames from 'classnames';
 import Link from 'next/link';
 
+import {
+  customRound,
+  formatNumber,
+  formatNumberToShortScale,
+} from '@/utils/Stringfy';
+
 import StarComponent from './Explorer/Star';
 
 export interface PeriodInterface {
@@ -11,58 +17,21 @@ export interface PeriodInterface {
 interface Props {
   tableData: Array<any>;
   periods: PeriodInterface[];
+  title: String;
+  isWatchList?: boolean;
 }
 
-const TableComponent = ({ tableData, periods }: Props) => {
-  function formatNumberToShortScale(number: number) {
-    let divisor;
-    let suffix;
-
-    if (number >= 1e12) {
-      divisor = 1e12;
-      suffix = 'T'; // Trillions
-    } else if (number >= 1e9) {
-      divisor = 1e9;
-      suffix = 'B'; // Billions
-    } else if (number >= 1e6) {
-      divisor = 1e6;
-      suffix = 'M'; // Millions
-    } else if (number >= 1e3) {
-      divisor = 1e3;
-      suffix = 'K'; // Thousands
-    } else {
-      return number.toString(); // Return the number as-is if it's less than 1000
-    }
-
-    const shortNumber = (number / divisor).toFixed(2) + suffix;
-    return shortNumber;
-  }
-
-  function formatNumber(number: number) {
-    return number.toLocaleString('en-US', {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
-  }
-
-  function customRound(number: number) {
-    const factor = 100;
-    const rounded = Math.floor(number * factor) / factor; // Round down to 2 decimal places
-    const remainder = (number * factor) % 1; // Get the fractional part of the number * 100
-
-    // Check if the third decimal place is 5 or more, and adjust the result accordingly
-    if (remainder >= 0.5) {
-      return (Math.floor(number * factor) + 1) / factor;
-    }
-    return rounded;
-  }
+const TableComponent = ({
+  tableData,
+  periods,
+  title,
+  isWatchList = false,
+}: Props) => {
   return (
     <div>
       <div className="mb-2 flex items-center justify-between">
         <div className="flex flex-col md:px-4 md:py-2">
-          <span className="mb-1 text-xl font-medium leading-7">
-            All cryptocurrencies
-          </span>
+          <span className="mb-1 text-xl font-medium leading-7">{title}</span>
           <span className="text-md leading-5 text-stone-600">
             {tableData.length} assets
           </span>
@@ -143,7 +112,7 @@ const TableComponent = ({ tableData, periods }: Props) => {
                 ${formatNumber(row.current_price)}
               </p>
               <p
-                className={`text-lg ${
+                className={`${
                   row.price_change_percentage_24h < 0
                     ? 'text-red-500'
                     : 'text-green'
@@ -153,13 +122,13 @@ const TableComponent = ({ tableData, periods }: Props) => {
               </p>
             </div>
             <div className="hidden h-full w-24 flex-col items-end justify-center md:flex">
-              <p className="text-lg text-stone-600">
+              <p className="text-stone-600">
                 ${formatNumber(row.current_price)}
               </p>
             </div>
             <div className="hidden h-full w-32 flex-col items-end justify-center xl:flex">
               <p
-                className={`text-lg ${
+                className={`${
                   row.price_change_percentage_24h < 0
                     ? 'text-red-500'
                     : 'text-green'
@@ -169,18 +138,16 @@ const TableComponent = ({ tableData, periods }: Props) => {
               </p>
             </div>
             <div className="hidden h-full w-24 flex-col items-start justify-center md:flex">
-              <p className="text-lg text-stone-600">
+              <p className="text-stone-600">
                 ${formatNumberToShortScale(row.market_cap)}
               </p>
             </div>
             <div className="hidden h-full w-20 flex-col items-center justify-center sm:flex">
               <div className="rounded-full bg-violet-200 px-4 py-2 hover:bg-violet-300">
-                <p className="select-none text-lg font-semibold text-indigo-800">
-                  Buy
-                </p>
+                <p className="select-none font-semibold text-indigo-800">Buy</p>
               </div>
             </div>
-            <div className="hidden w-9 md:flex">
+            <div className={`${isWatchList ? 'flex' : 'hidden'} w-9 md:flex`}>
               <div>
                 <StarComponent isActive={row.isActive} />
               </div>

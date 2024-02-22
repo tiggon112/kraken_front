@@ -104,7 +104,11 @@ const Home: NextPageWithLayout = () => {
         </Tab.Group>
       </div>
       <CustomCard className="h-full p-4">
-        <TableComponent tableData={tableData} periods={periods} />
+        <TableComponent
+          title="All cryptocurrencies"
+          tableData={tableData}
+          periods={periods}
+        />
       </CustomCard>
     </div>
   );

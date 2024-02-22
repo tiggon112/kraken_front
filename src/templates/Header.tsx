@@ -219,7 +219,7 @@ const Header = () => {
         </ul>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <ARoundedTransparent
-            additionalClassName="mr-[10px]"
+            className="mr-[10px]"
             text="Sign in"
             href="/sign-in"
           />
@@ -267,12 +267,12 @@ const Header = () => {
 
                 <div>
                   <ARoundedPurple
-                    additionalClassName="mr-[10px]"
+                    className="mr-[10px]"
                     text="Sign in"
                     href="/sign-in"
                   />
                   <ARoundedWhite
-                    additionalClassName="border-purple"
+                    className="border-purple"
                     text="Sign up"
                     href="/sign-up"
                   />

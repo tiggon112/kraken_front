@@ -25,7 +25,7 @@ const KrakenPro = () => {
           <VerticalSpacerInPixel pixel="h-[48px]" />
           <MelaniImage
             srcPath="/assets/images/statistics-2512x1608.png"
-            additionalClassName=" lg:block hidden w-full h-auto"
+            className=" hidden h-auto w-full lg:block"
           />
           <MelaniComponent>
             <div className=" mt-0 w-full lg:mt-[-80px]"></div>
@@ -97,7 +97,7 @@ const KrakenPro = () => {
           <MelaniComponent>
             <div className="flex flex-row items-start justify-center">
               <ARoundedWhite
-                additionalClassName="m-auto"
+                className="m-auto"
                 href="https://pro.kraken.com"
                 text="Trade crypto"
               />

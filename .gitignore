@@ -37,3 +37,4 @@ local
 
 # Contentlayer
 .contentlayer
+src/pages/sign-in.tsx

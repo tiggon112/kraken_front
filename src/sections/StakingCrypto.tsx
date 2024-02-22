@@ -203,7 +203,7 @@ const StakingCrypto = () => {
             <ARoundedPurple
               href="/features/staking-coins"
               text="Start earning today"
-              additionalClassName="flex flex-row items-start justify-center"
+              className="flex flex-row items-start justify-center"
             />
           </div>
         </MelaniComponent>

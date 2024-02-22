@@ -236,7 +236,7 @@ const Deposit: NextPageWithLayout = () => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="absolute right-0 mt-4 w-full origin-top-right divide-y divide-gray-100 rounded-md bg-white p-2 px-4 shadow-lg ring-1 ring-black/5 focus:outline-none">
+                    <Menu.Items className="absolute right-0 z-20 mt-4 w-full origin-top-right divide-y divide-gray-100 rounded-md bg-white p-2 px-4 shadow-lg ring-1 ring-black/5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
                           <button
@@ -303,7 +303,7 @@ const Deposit: NextPageWithLayout = () => {
               </div>
               <div className="w-full">
                 <ARoundedPurple
-                  additionalClassName="p-2 w-full"
+                  className="w-full p-2"
                   text="Copy deposit address"
                 />
               </div>
@@ -372,7 +372,7 @@ const Deposit: NextPageWithLayout = () => {
               </div>
               <div className="mt-3">
                 <ARoundedPurple
-                  additionalClassName="p-2 !bg-violet-200 text-purple"
+                  className="!bg-violet-200 p-2 text-purple"
                   text="View all transactions"
                 />
               </div>

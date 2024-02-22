@@ -28,7 +28,7 @@ const CryptoMakesGo = () => {
                 <div className="relative top-[-32px] mx-auto box-border w-max">
                   <MelaniImage
                     srcPath="/assets/images/globe.png"
-                    additionalClassName="lg:h-[180px] lg:w-auto h-[110px] w-[110px]"
+                    className="h-[110px] w-[110px] lg:h-[180px] lg:w-auto"
                   />
                 </div>
                 <div className="flex flex-row items-center justify-center">

@@ -29,7 +29,7 @@ const BuyCryptoInMinutes = () => {
             </div>
             <MelaniImage
               srcPath="/assets/images/good-morning-satoshi.png"
-              additionalClassName="w-auto"
+              className="w-auto"
             />
             <div className="flex flex-col content-start items-stretch">
               <div className=" hidden flex-col content-start lg:block">
@@ -43,7 +43,7 @@ const BuyCryptoInMinutes = () => {
               </div>
               <div className=" flex flex-col content-start items-center lg:flex-row">
                 <MelaniImage
-                  additionalClassName=" w-auto h-[58px]"
+                  className=" h-[58px] w-auto"
                   srcPath="/assets/images/icons/circled-number-1-233x232.png"
                 />
                 <div className="text-left text-[18px] font-medium leading-[30px] text-black lg:text-[24px]">
@@ -54,7 +54,7 @@ const BuyCryptoInMinutes = () => {
               </div>
               <div className=" flex flex-col content-start items-center lg:flex-row">
                 <MelaniImage
-                  additionalClassName=" w-auto h-[58px]"
+                  className=" h-[58px] w-auto"
                   srcPath="/assets/images/icons/circled-number-2-233x232.png"
                 />
                 <div className="text-left  text-[18px] font-medium leading-[30px] text-black lg:text-[24px]">
@@ -65,7 +65,7 @@ const BuyCryptoInMinutes = () => {
               </div>
               <div className=" flex flex-col content-start items-center lg:flex-row">
                 <MelaniImage
-                  additionalClassName=" w-auto h-[58px]"
+                  className=" h-[58px] w-auto"
                   srcPath="/assets/images/icons/circled-number-3-233x232.png"
                 />
                 <div className="text-left text-[18px] font-medium leading-[30px] text-black lg:text-[24px]">
@@ -77,7 +77,7 @@ const BuyCryptoInMinutes = () => {
               <VerticalSpacerInPixel pixel="h-[40px]" />
               <div className=" flex flex-col content-center items-stretch lg:flex-row lg:content-start">
                 <ARoundedPurple
-                  additionalClassName="m-auto lg:m-none"
+                  className="m-auto lg:m-none"
                   text="Buy crypto"
                 />
               </div>

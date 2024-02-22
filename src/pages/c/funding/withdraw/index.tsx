@@ -303,7 +303,7 @@ const Deposit: NextPageWithLayout = () => {
               </div>
               <div className="w-full">
                 <ARoundedPurple
-                  additionalClassName="p-2 w-full"
+                  className="w-full p-2"
                   text="Copy deposit address"
                 />
               </div>
@@ -372,7 +372,7 @@ const Deposit: NextPageWithLayout = () => {
               </div>
               <div className="mt-3">
                 <ARoundedPurple
-                  additionalClassName="p-2 !bg-violet-200 text-purple"
+                  className="!bg-violet-200 p-2 text-purple"
                   text="View all transactions"
                 />
               </div>

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 import { CustomCard } from '@/components/Card';
 import Layout from '@/components/Layouts/Layout';
+import { formatNumber } from '@/utils/Stringfy';
 
 const CoinExplorer = () => {
   const router = useRouter();
@@ -14,7 +15,7 @@ const CoinExplorer = () => {
     const fetchData = async () => {
       const response = await axios(`/api/coin/${router.query.coin_name}`);
       setCoinData(response.data.data);
-      console.log(coinData);
+      console.log(response.data.data);
     };
 
     fetchData();
@@ -46,8 +47,17 @@ const CoinExplorer = () => {
               <div className="flex flex-col">
                 <p>Price</p>
                 <div className="flex items-baseline">
-                  <span></span>
-                  <span></span>
+                  <span className="text-4xl leading-12 text-darkgrey">$</span>
+                  <span className="text-4xl font-medium leading-12">
+                    {coinData.market_data
+                      ? formatNumber(coinData.market_data?.current_price.usd)
+                      : ''}
+                  </span>
+                  <span className="font-medium">
+                    {coinData.market_data
+                      ? formatNumber(coinData.market_data?.price_change_24h)
+                      : ''}
+                  </span>
                 </div>
               </div>
             </CustomCard>

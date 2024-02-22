@@ -78,6 +78,7 @@ module.exports = {
       },
       lineHeight: {
         hero: '4.5rem',
+        12: '3rem',
       },
     },
   },

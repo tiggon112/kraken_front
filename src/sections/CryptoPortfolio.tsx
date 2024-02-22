@@ -347,10 +347,7 @@ const CryptoPortfolio = () => {
         </div>
         <VerticalSpacerInPixel pixel="h-[40px]" />
         <div className=" flex flex-col content-center items-stretch lg:flex-row lg:content-start">
-          <ARoundedPurple
-            additionalClassName=" opl-hover m-auto  "
-            text="Buy crypto"
-          />
+          <ARoundedPurple className=" opl-hover m-auto  " text="Buy crypto" />
         </div>
 
         <VerticalSpacerInPixel pixel="h-[84px]" />

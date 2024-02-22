@@ -22,7 +22,7 @@ const StartJourney = () => {
             <VerticalSpacerInPixel pixel="h-[24px]" />
             <div className="flex flex-row items-start justify-center">
               <ARoundedPurple
-                additionalClassName="m-auto"
+                className="m-auto"
                 text="Get started with Kraken"
                 href="/sign-up"
               />
@@ -44,7 +44,7 @@ const StartJourney = () => {
               <div className="relative">
                 <VerticalSpacerInPixel pixel="h-[60px]" />
                 <TextBigPurple
-                  additionalClassName="lg:text-left"
+                  className="lg:text-left"
                   text="Start your crypto journey"
                 />
                 <VerticalSpacerInPixel pixel="h-[30px]" />
@@ -58,7 +58,7 @@ const StartJourney = () => {
                 </div>
                 <VerticalSpacerInPixel pixel="h-[30px]" />
                 <ARoundedPurple
-                  additionalClassName="m-auto"
+                  className="m-auto"
                   text="Get started with Kraken"
                   href="/sign-up"
                 />

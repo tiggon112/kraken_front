@@ -16,7 +16,7 @@ const Header = () => (
       <div className="col-span-1"></div>
       <div className="col-span-1 flex cursor-pointer items-center justify-end gap-2">
         <ARoundedPurple
-          additionalClassName="h-[2.75rem] p-1"
+          className="h-[2.75rem] p-1 font-semibold"
           text="Buy Crypto"
         />
         <FontAwesomeIcon

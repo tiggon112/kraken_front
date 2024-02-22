@@ -23,7 +23,7 @@ const SignIn = () => {
           <div className="ml-auto flex items-center gap-1 border-purple">
             <LangCombo selectedColor=" text-purple " />
             <ARoundedTransparentAtSignIn
-              additionalClassName=" sign-in-button text-purple border-purple py-[6px] px-[22px] ml-2 common-sign-upin-button"
+              className=" sign-in-button common-sign-upin-button ml-2 border-purple px-[22px] py-[6px] text-purple"
               text="Create account"
               href="/sign-up"
             />
@@ -77,9 +77,9 @@ const SignIn = () => {
             </Link>
             <ARoundedPurple
               text="Sign in"
-              additionalClassName={`${
+              className={`${
                 email === '' || password === '' ? 'disabled-a' : 'enabled-a'
-              } py-[8px] min-w-[180px] "`}
+              } " min-w-[180px] py-[8px]`}
               href="#"
             />
           </div>
