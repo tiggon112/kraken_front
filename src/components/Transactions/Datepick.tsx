@@ -115,21 +115,24 @@ export default function Datepick(props: RoundedAProps) {
   };
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="relative">
       <button
-        className="realtive border-1 inline-flex w-full gap-2 rounded-md bg-stone-100 px-4 py-2 text-sm font-medium text-stone-500  hover:bg-stone-200 hover:text-stone-800  focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+        className=" realtive border-1 inline-flex w-full items-center gap-1 text-nowrap rounded-md bg-stone-100 px-2 py-1 text-sm font-medium text-stone-500 hover:bg-stone-200 hover:text-stone-800  focus:outline-none focus-visible:ring-2  focus-visible:ring-white/75 md:gap-2 md:px-4 md:py-2"
         onClick={() => {
           setHide(!hide);
         }}
       >
         <span>{props.label}</span>
         {hide ? (
-          <ChevronDownIcon className="h-6 w-6" aria-hidden="true" />
+          <ChevronDownIcon
+            className="h-4 w-4 md:h-6 md:w-6"
+            aria-hidden="true"
+          />
         ) : (
-          <ChevronUpIcon className="h-6 w-6" aria-hidden="true" />
+          <ChevronUpIcon className="h-4 w-4 md:h-6 md:w-6" aria-hidden="true" />
         )}
       </button>
-      <div className={`${hide ? 'hidden' : 'block'} absolute`}>
+      <div className={`${hide ? 'hidden' : 'block'} absolute right-0`}>
         <Flowbite theme={{ theme: customTheme }}>
           <Datepicker inline className=" text-red-700" />
         </Flowbite>

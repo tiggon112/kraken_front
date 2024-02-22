@@ -1,7 +1,8 @@
-import { faCheck, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Menu, Tab, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import { Checkbox } from 'flowbite-react';
 import Image from 'next/image';
 import { Fragment } from 'react';
 
@@ -57,20 +58,23 @@ const Deposit: NextPageWithLayout = () => {
           </Tab.Group>
         </div>
         <div className="">
-          <CustomCard className="mt-4 flex flex-col gap-6 p-6 px-8">
+          <CustomCard className="mt-4 flex flex-col gap-3 p-2 md:gap-6 md:p-4 md:p-6 md:px-8">
             <div className="flex items-center justify-between">
               <h2 className=" text-2xl font-medium">Transactions</h2>
-              <button className="flex items-center gap-2 rounded-full bg-stone-200 px-4 py-2 hover:bg-stone-300">
+              <button className="flex items-center gap-1 rounded-full bg-stone-200 px-2 py-1 hover:bg-stone-300 md:gap-2 md:px-4 md:py-2">
                 <FontAwesomeIcon className="text-stone-600" icon={faDownload} />
                 Export
               </button>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-1 md:gap-2">
               <Menu as="div" className="relative inline-block text-left">
                 <div>
-                  <Menu.Button className="realtive border-1 inline-flex w-full gap-2 rounded-md bg-stone-100 px-4 py-2 text-sm font-medium text-stone-500  hover:bg-stone-200 hover:text-stone-800  focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+                  <Menu.Button className=" realtive border-1 inline-flex w-full items-center gap-1 rounded-md bg-stone-100 px-2 py-1 text-sm font-medium text-stone-500 hover:bg-stone-200 hover:text-stone-800 focus:outline-none  focus-visible:ring-2 focus-visible:ring-white/75  md:gap-2 md:px-4 md:py-2">
                     <span>Assets</span>
-                    <ChevronDownIcon className="h-6 w-6" aria-hidden="true" />
+                    <ChevronDownIcon
+                      className="h-4 w-4 md:h-6 md:w-6"
+                      aria-hidden="true"
+                    />
                   </Menu.Button>
                 </div>
                 <Transition
@@ -110,9 +114,12 @@ const Deposit: NextPageWithLayout = () => {
               </Menu>
               <Menu as="div" className="relative inline-block text-left">
                 <div>
-                  <Menu.Button className="realtive border-1 inline-flex w-full gap-2 rounded-md bg-stone-100 px-4 py-2 text-sm font-medium text-stone-500  hover:bg-stone-200 hover:text-stone-800  focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+                  <Menu.Button className=" realtive border-1 inline-flex w-full items-center gap-1 rounded-md bg-stone-100 px-2 py-1 text-sm font-medium text-stone-500 hover:bg-stone-200 hover:text-stone-800 focus:outline-none  focus-visible:ring-2 focus-visible:ring-white/75  md:gap-2 md:px-4 md:py-2">
                     <span>Types</span>
-                    <ChevronDownIcon className="h-6 w-6" aria-hidden="true" />
+                    <ChevronDownIcon
+                      className="h-4 w-4 md:h-6 md:w-6"
+                      aria-hidden="true"
+                    />
                   </Menu.Button>
                 </div>
                 <Transition
@@ -124,7 +131,7 @@ const Deposit: NextPageWithLayout = () => {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                  <Menu.Items className="absolute right-0 mt-4 w-full origin-top-right divide-y divide-gray-100 rounded-md bg-white p-2 px-4 shadow-lg ring-1 ring-black/5 focus:outline-none">
+                  <Menu.Items className="absolute right-0 mt-2 w-full origin-top-right divide-y divide-gray-100 rounded-md bg-white p-2 shadow-lg ring-1 ring-black/5 focus:outline-none">
                     <Menu.Item>
                       {({ active }) => (
                         <button
@@ -132,8 +139,8 @@ const Deposit: NextPageWithLayout = () => {
                             active ? 'bg-violet-500/20' : ''
                           } group flex w-full items-center justify-start gap-2 rounded-md p-2 text-sm text-gray-900`}
                         >
-                          <div className="h-4 w-4 text-black"></div>
-                          Lightning
+                          <Checkbox id="NFT" />
+                          NFT
                         </button>
                       )}
                     </Menu.Item>
@@ -144,9 +151,7 @@ const Deposit: NextPageWithLayout = () => {
                             active ? 'bg-violet-500/20' : ''
                           } group flex w-full items-center justify-start gap-2 rounded-md p-2 text-sm text-gray-900`}
                         >
-                          <div className="h-4 w-4 text-black">
-                            <FontAwesomeIcon icon={faCheck} />
-                          </div>
+                          <Checkbox id="Bitcoin" />
                           Bitcoin
                         </button>
                       )}
@@ -164,11 +169,11 @@ const Deposit: NextPageWithLayout = () => {
                 width={200}
                 alt="no data"
               />
-              <div className="flex flex-col items-center gap-2">
-                <h5 className=" text-xl font-medium">
+              <div className="flex flex-col items-center justify-center gap-1 md:gap-2">
+                <h5 className="text-md font-medium md:text-xl">
                   Your crypto journey starts now
                 </h5>
-                <span className="text-stone-500">
+                <span className="md:text-md text-sm text-stone-500">
                   We couldn&apos;t find any transactions for this account. New
                   activity will appear here.
                 </span>
