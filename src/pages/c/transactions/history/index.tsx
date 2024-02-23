@@ -58,7 +58,7 @@ const Deposit: NextPageWithLayout = () => {
           </Tab.Group>
         </div>
         <div className="">
-          <CustomCard className="mt-4 flex flex-col gap-3 p-2 md:gap-6 md:p-4 md:p-6 md:px-8">
+          <CustomCard className="mt-4 flex flex-col gap-3 p-2 md:gap-6 md:p-6 md:px-8">
             <div className="flex items-center justify-between">
               <h2 className=" text-2xl font-medium">Transactions</h2>
               <button className="flex items-center gap-1 rounded-full bg-stone-200 px-2 py-1 hover:bg-stone-300 md:gap-2 md:px-4 md:py-2">
@@ -179,8 +179,8 @@ const Deposit: NextPageWithLayout = () => {
                 </span>
               </div>
               <ARoundedPurple
-                additionalClassName="p-2 w-fit !bg-violet-200 text-purple"
-                text="Buy Crypto"
+                className="w-fit !bg-violet-200 p-2 font-medium text-purple"
+                text="Buy crypto"
               />
             </div>
           </CustomCard>

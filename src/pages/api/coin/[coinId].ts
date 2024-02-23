@@ -7,11 +7,12 @@ type ResponseData = {
 };
 
 export default async function handler(
-  _req: NextApiRequest,
+  req: NextApiRequest,
   res: NextApiResponse<ResponseData>,
 ) {
+  const { coinId } = req.query;
   const response = await axios.get(
-    'https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false',
+    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coinId}&price_change_percentage=24h%2C7d%2C30d%2C1y&locale=en`,
   );
   res.status(200).json({ message: 'Hello from Next.js!', data: response.data });
 }

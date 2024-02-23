@@ -13,13 +13,13 @@ const CoinExplorer = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios(`/api/coin/${router.query.coin_name}`);
-      setCoinData(response.data.data);
-      console.log(response.data.data);
+      const response = await axios(`/api/coin/${router.query.coin_id}`);
+      console.log(response.data.data[0]);
+      setCoinData(response.data.data[0]);
     };
 
-    fetchData();
-  }, []);
+    if (router.isReady) fetchData();
+  }, [router]);
 
   return (
     <div className="w-full">
@@ -49,14 +49,29 @@ const CoinExplorer = () => {
                 <div className="flex items-baseline">
                   <span className="text-4xl leading-12 text-darkgrey">$</span>
                   <span className="text-4xl font-medium leading-12">
-                    {coinData.market_data
-                      ? formatNumber(coinData.market_data?.current_price.usd)
+                    {coinData.current_price
+                      ? formatNumber(coinData?.current_price)
                       : ''}
                   </span>
-                  <span className="font-medium">
-                    {coinData.market_data
-                      ? formatNumber(coinData.market_data?.price_change_24h)
+                  <span className="ml-2 font-medium text-green">
+                    +$
+                    {coinData.current_price
+                      ? formatNumber(
+                          (coinData.price_change_percentage_30d_in_currency *
+                            coinData.current_price) /
+                            (coinData.price_change_percentage_30d_in_currency +
+                              100),
+                        )
                       : ''}
+                  </span>
+                  <span className="ml-2 font-medium text-green">
+                    (+
+                    {coinData.current_price
+                      ? formatNumber(
+                          coinData.price_change_percentage_30d_in_currency,
+                        )
+                      : ''}
+                    %)
                   </span>
                 </div>
               </div>

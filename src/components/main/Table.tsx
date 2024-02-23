@@ -87,7 +87,7 @@ const TableComponent = ({
         {tableData.map((row, inx) => (
           <Link
             key={inx + 1}
-            href={`/c/explore/${row.symbol}`}
+            href={`/c/explore/${row.id}`}
             className="flex h-20 w-full items-center justify-between hover:bg-violet-50"
           >
             <div className="flex h-12 w-64 justify-between">

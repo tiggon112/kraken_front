@@ -29,7 +29,7 @@ const Home: NextPageWithLayout = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios('/api/coin');
+      const response = await axios('/api/coin?count=30');
       setTableData(
         response.data.data.map((row: any) => ({ isActive: false, ...row })),
       );
